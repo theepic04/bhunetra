@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="120 70 340 270" width="100%" height="100%">
+  <!-- Radar Waves emanating from top right -->
+  <g id="radar-signals" fill="none" stroke-linecap="round">
+    <path d="M 335 140 A 42 42 0 0 1 380 178" stroke="#9ec93b" stroke-width="8" />
+    <path d="M 335 108 A 74 74 0 0 1 414 176" stroke="#b8d799" stroke-width="8" />
+    <path d="M 335 76 A 106 106 0 0 1 448 174" stroke="#d5e7c3" stroke-width="8" />
+  </g>
+
+  <!-- Mountains -->
+  <!-- Left dark mountain peak -->
+  <path d="M 138 232 L 208 145 L 216 153 L 300 82 L 356 166 L 300 186 Z" fill="#253443" />
+  <!-- Dark facet/shadow on left mountain -->
+  <path d="M 300 82 L 300 186 L 258 178 Z" fill="#1c2833" />
+
+  <!-- Right green mountain peak -->
+  <path d="M 300 186 L 300 126 L 382 178 L 424 236 L 338 194 Z" fill="#597a65" />
+  <path d="M 300 126 L 356 166 L 300 186 Z" fill="#44614e" />
+
+  <!-- Eye Graphic -->
+  <!-- Upper Eyelid -->
+  <path d="M 152 248 C 200 196, 280 182, 300 182 C 320 182, 400 196, 448 248 C 412 216, 346 202, 300 202 C 254 202, 188 216, 152 248 Z" fill="#253443" />
+  <!-- Upper Eyelid right flourish crease -->
+  <path d="M 384 236 C 410 248, 436 256, 458 258 C 432 252, 404 244, 384 236 Z" fill="#253443" />
+
+  <!-- Lower Eyelid -->
+  <path d="M 152 254 C 196 304, 268 318, 300 318 C 332 318, 404 304, 448 254 C 410 292, 342 298, 300 298 C 258 298, 190 292, 152 254 Z" fill="#253443" />
+
+  <!-- Outer Iris Ring (Sage Green) -->
+  <circle cx="300" cy="250" r="38" stroke="#597a65" stroke-width="7" fill="#ffffff" />
+
+  <!-- Pupil (Dark Slate Navy) -->
+  <circle cx="300" cy="250" r="24" fill="#253443" />
+
+  <!-- Specular Highlight Catchlight (White) -->
+  <circle cx="309" cy="241" r="7.5" fill="#ffffff" />
+</svg>

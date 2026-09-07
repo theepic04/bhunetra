@@ -1,0 +1,900 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================================================================
+   CENTRALIZED THEME ENGINE (BHUNETRA - SEE RISK. SAVE LIVES.)
+   ========================================================================== */
+
+/* Dark Mode Global Canvas & Color Scheme */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #080f1e; /* Deep Dark Navy Main Page Canvas */
+  color: #f8fafc;
+}
+
+/* ==========================================================================
+   1. CORE CANVAS & CARD HIERARCHY (DEEP DARK NAVY ARCHITECTURE)
+   ========================================================================== */
+
+/* Main Page Canvas Backgrounds */
+html.dark .bg-slate-50,
+html.dark .bg-gray-50,
+html.dark [class*="bg-slate-50/"],
+html.dark [class*="bg-gray-50/"] {
+  background-color: #080f1e !important; /* Deep dark navy */
+}
+
+/* Primary Card Backgrounds & Containers (excluding BhuNetra Logo Frame) */
+html.dark .bg-white:not(.bhunetra-logo-frame),
+html.dark [class*="bg-white/"]:not(.bhunetra-logo-frame),
+html.dark [class*="bg-white "]:not(.bhunetra-logo-frame) {
+  background-color: #121d33 !important; /* Lighter elevated dark navy card */
+  border-color: #1e3256 !important; /* Crisp subtle navy border */
+}
+
+/* Specific Semi-Translucent Overlays, Floating Controls and Info Strips */
+html.dark [class*="bg-white/95"]:not(.bhunetra-logo-frame),
+html.dark [class*="bg-white/90"]:not(.bhunetra-logo-frame),
+html.dark [class*="bg-white/80"]:not(.bhunetra-logo-frame),
+html.dark [class*="bg-white/70"]:not(.bhunetra-logo-frame),
+html.dark [class*="bg-white/60"]:not(.bhunetra-logo-frame),
+html.dark [class*="bg-white/50"]:not(.bhunetra-logo-frame) {
+  background-color: #16243d !important; /* Refined dark navy overlay */
+  border-color: #243c63 !important;
+}
+
+/* Landing Page Root & Structural Section Layers */
+html.dark main > .w-full.bg-white,
+html.dark div.w-full.bg-white:has(section) {
+  background-color: #080f1e !important;
+}
+
+html.dark section.bg-white {
+  background-color: #0c1527 !important;
+  border-bottom-color: #1e3256 !important;
+}
+
+html.dark section.bg-slate-50 {
+  background-color: #080f1e !important;
+  border-bottom-color: #1e3256 !important;
+}
+
+html.dark footer.bg-white {
+  background-color: #070d18 !important;
+  border-top-color: #1e3256 !important;
+}
+
+/* Secondary Panels, Filter Wells, and Inset Modules */
+html.dark .bg-slate-100,
+html.dark [class*="bg-slate-100/"] {
+  background-color: #16243d !important; /* Subtle tertiary dark shade */
+  border-color: #243a5e !important;
+}
+
+html.dark .bg-slate-200,
+html.dark [class*="bg-slate-200/"] {
+  background-color: #1c2e4d !important;
+}
+
+html.dark .bg-slate-300,
+html.dark [class*="bg-slate-300/"] {
+  background-color: #263d63 !important;
+}
+
+/* Elements with light-mode dark fills */
+html.dark .bg-slate-800 {
+  background-color: #0c1527 !important;
+}
+
+/* Sidebar & Navigation Bars */
+html.dark aside#app-sidebar {
+  background-color: #0c1527 !important;
+  border-right-color: #1e3256 !important;
+}
+
+html.dark aside#app-sidebar button.bg-slate-900 {
+  background-color: #1e3a8a !important;
+  border: 1px solid #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+html.dark aside#app-sidebar .bg-slate-200 {
+  background-color: #1a2c4a !important;
+  color: #cbd5e1 !important;
+}
+
+html.dark aside#app-sidebar .hover\:bg-slate-100:hover,
+html.dark aside#app-sidebar .hover\:bg-slate-200\/60:hover {
+  background-color: #16243d !important;
+  color: #f8fafc !important;
+}
+
+html.dark aside#app-sidebar > div:last-child {
+  background-color: #0c1527 !important;
+  border-top-color: #1e3256 !important;
+}
+
+html.dark header {
+  background-color: #0c1527 !important;
+  border-bottom-color: #1e3256 !important;
+}
+
+/* Borders & Dividers with Crisp Contrast */
+html.dark .border-slate-100,
+html.dark [class*="border-slate-100/"] {
+  border-color: #182842 !important;
+}
+
+html.dark .border-slate-200,
+html.dark .border-slate-300,
+html.dark [class*="border-slate-200/"],
+html.dark [class*="border-slate-300/"] {
+  border-color: #1e3256 !important;
+}
+
+html.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #182842 !important;
+}
+
+html.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]),
+html.dark .divide-slate-300 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1e3256 !important;
+}
+
+/* ==========================================================================
+   2. TYPOGRAPHY HIERARCHY
+   Primary: Bright white / light
+   Secondary: Muted light gray, clearly readable
+   ========================================================================== */
+html.dark .text-slate-900 {
+  color: #f8fafc !important; /* Bright white primary text */
+}
+
+html.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important; /* Clearly readable secondary text */
+}
+
+html.dark .text-slate-500 {
+  color: #94a3b8 !important; /* Crisp muted metadata text */
+}
+
+html.dark .text-slate-400 {
+  color: #71829e !important;
+}
+
+html.dark .text-white {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   3. BUTTONS & INTERACTIVE CONTROLS
+   High contrast, clear state feedback
+   ========================================================================== */
+
+/* Secondary / Neutral White Buttons in Dark Mode */
+html.dark button.bg-white,
+html.dark button[class*="bg-white"],
+html.dark a.bg-white,
+html.dark a[class*="bg-white"] {
+  background-color: #16243d !important;
+  border-color: #2b436d !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark button.bg-white:hover,
+html.dark button[class*="bg-white"]:hover,
+html.dark a.bg-white:hover,
+html.dark a[class*="bg-white"]:hover {
+  background-color: #1e3254 !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+}
+
+/* Dark Action Buttons in Light Mode mapped to High-Contrast Buttons */
+html.dark button.bg-slate-900,
+html.dark button[class*="bg-slate-900"],
+html.dark aside#app-sidebar .bg-slate-900 {
+  background-color: #0284c7 !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+}
+
+html.dark button.bg-slate-900:hover,
+html.dark button[class*="bg-slate-900"]:hover {
+  background-color: #0369a1 !important;
+}
+
+/* Interactive Hover States */
+html.dark .hover\:bg-slate-50:hover,
+html.dark .hover\:bg-slate-100:hover,
+html.dark [class*="hover:bg-slate-50"]:hover,
+html.dark [class*="hover:bg-slate-100"]:hover {
+  background-color: #1a2c4a !important;
+}
+
+html.dark .hover\:text-slate-900:hover,
+html.dark .hover\:text-slate-800:hover {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   4. FORM CONTROLS (INPUTS, SELECTS, DROPDOWNS, SEARCH BOXES)
+   Dark recessed navy, clearly visible borders, bright text
+   ========================================================================== */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #0c1526 !important;
+  color: #f8fafc !important;
+  border-color: #283f66 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #71829e !important;
+}
+
+html.dark select option {
+  background-color: #0c1526 !important;
+  color: #f8fafc !important;
+}
+
+html.dark input:focus,
+html.dark select:focus,
+html.dark textarea:focus {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3) !important;
+}
+
+/* ==========================================================================
+   5. RISK CARDS & HAZARD PANELS (PRESERVE VIVID RISK COLORS AS ACCENTS)
+   Cards retain deep dark navy bodies rather than pale gray/washed-out tones.
+   Risk colors shine as crisp borders, luminous badges, and accents.
+   Normal = Green, Watch = Yellow, Warning/High = Orange, Emergency = Red
+   ========================================================================== */
+
+/* 5.1 Normal / Low Risk (Green / Emerald) */
+html.dark div[class*="bg-emerald-50"],
+html.dark div[class*="bg-green-50"],
+html.dark p[class*="bg-emerald-50"],
+html.dark p[class*="bg-green-50"],
+html.dark section[class*="bg-emerald-50"] {
+  background-color: #112133 !important; /* Solid dark navy with emerald tone */
+  border-color: #10b981 !important; /* Vivid green accent border */
+  color: #f8fafc !important;
+}
+
+html.dark span[class*="bg-emerald-50"],
+html.dark span[class*="bg-green-50"],
+html.dark span[class*="bg-emerald-100"],
+html.dark span[class*="bg-green-100"],
+html.dark [class*="rounded-full"][class*="bg-emerald-100"],
+html.dark [class*="rounded-md"][class*="bg-emerald-100"] {
+  background-color: rgba(16, 185, 129, 0.22) !important;
+  border-color: rgba(16, 185, 129, 0.45) !important;
+  color: #34d399 !important;
+}
+
+html.dark .text-emerald-600,
+html.dark .text-emerald-700,
+html.dark .text-emerald-800,
+html.dark .text-green-600,
+html.dark .text-green-700,
+html.dark .text-green-800 {
+  color: #34d399 !important;
+}
+
+html.dark .border-emerald-200,
+html.dark .border-emerald-300,
+html.dark .border-green-200 {
+  border-color: #10b981 !important;
+}
+
+/* 5.2 Watch / Moderate Risk (Yellow / Amber) */
+html.dark div[class*="bg-amber-50"],
+html.dark div[class*="bg-yellow-50"],
+html.dark p[class*="bg-amber-50"],
+html.dark p[class*="bg-yellow-50"],
+html.dark section[class*="bg-amber-50"] {
+  background-color: #161e33 !important; /* Solid dark navy with amber tone */
+  border-color: #f59e0b !important; /* Vivid amber accent border */
+  color: #f8fafc !important;
+}
+
+html.dark span[class*="bg-amber-50"],
+html.dark span[class*="bg-yellow-50"],
+html.dark span[class*="bg-amber-100"],
+html.dark span[class*="bg-yellow-100"],
+html.dark [class*="rounded-full"][class*="bg-amber-100"],
+html.dark [class*="rounded-md"][class*="bg-amber-100"],
+html.dark [class*="rounded-full"][class*="bg-yellow-100"] {
+  background-color: rgba(245, 158, 11, 0.22) !important;
+  border-color: rgba(245, 158, 11, 0.45) !important;
+  color: #fbbf24 !important;
+}
+
+html.dark .text-amber-600,
+html.dark .text-amber-700,
+html.dark .text-amber-800,
+html.dark .text-yellow-700,
+html.dark .text-yellow-800,
+html.dark .text-amber-900 {
+  color: #fbbf24 !important;
+}
+
+html.dark .border-amber-200,
+html.dark .border-amber-300,
+html.dark .border-yellow-200 {
+  border-color: #f59e0b !important;
+}
+
+/* 5.3 Warning / High Risk (Orange) */
+html.dark div[class*="bg-orange-50"],
+html.dark p[class*="bg-orange-50"],
+html.dark section[class*="bg-orange-50"] {
+  background-color: #181c33 !important; /* Solid dark navy with orange tone */
+  border-color: #f97316 !important; /* Vivid orange accent border */
+  color: #f8fafc !important;
+}
+
+html.dark span[class*="bg-orange-50"],
+html.dark span[class*="bg-orange-100"],
+html.dark [class*="rounded-full"][class*="bg-orange-100"],
+html.dark [class*="rounded-md"][class*="bg-orange-100"] {
+  background-color: rgba(249, 115, 22, 0.22) !important;
+  border-color: rgba(249, 115, 22, 0.45) !important;
+  color: #fb923c !important;
+}
+
+html.dark .text-orange-600,
+html.dark .text-orange-700,
+html.dark .text-orange-800 {
+  color: #fb923c !important;
+}
+
+html.dark .border-orange-200,
+html.dark .border-orange-300,
+html.dark .border-orange-400 {
+  border-color: #f97316 !important;
+}
+
+/* 5.4 Emergency / Critical Risk (Red) */
+html.dark div[class*="bg-red-50"],
+html.dark p[class*="bg-red-50"],
+html.dark section[class*="bg-red-50"] {
+  background-color: #1a1933 !important; /* Solid dark navy with crimson tone */
+  border-color: #ef4444 !important; /* Vivid red accent border */
+  color: #f8fafc !important;
+}
+
+html.dark span[class*="bg-red-50"],
+html.dark span[class*="bg-red-100"],
+html.dark [class*="rounded-full"][class*="bg-red-100"],
+html.dark [class*="rounded-md"][class*="bg-red-100"] {
+  background-color: rgba(239, 68, 68, 0.22) !important;
+  border-color: rgba(239, 68, 68, 0.5) !important;
+  color: #f87171 !important;
+}
+
+html.dark .text-red-600,
+html.dark .text-red-700,
+html.dark .text-red-800,
+html.dark .text-red-950 {
+  color: #fca5a5 !important;
+}
+
+html.dark .border-red-200,
+html.dark .border-red-300,
+html.dark .border-red-400,
+html.dark .border-red-500 {
+  border-color: #ef4444 !important;
+}
+
+/* 5.5 Information / Blue System Notices */
+html.dark div[class*="bg-blue-50"],
+html.dark p[class*="bg-blue-50"],
+html.dark section[class*="bg-blue-50"] {
+  background-color: #122038 !important; /* Solid dark navy with blue tone */
+  border-color: #3b82f6 !important; /* Blue accent border */
+  color: #f8fafc !important;
+}
+
+html.dark span[class*="bg-blue-50"],
+html.dark span[class*="bg-blue-100"],
+html.dark [class*="rounded-full"][class*="bg-blue-100"],
+html.dark [class*="rounded-md"][class*="bg-blue-100"] {
+  background-color: rgba(59, 130, 246, 0.22) !important;
+  border-color: rgba(59, 130, 246, 0.45) !important;
+  color: #60a5fa !important;
+}
+
+html.dark .text-blue-600,
+html.dark .text-blue-700,
+html.dark .text-blue-800,
+html.dark .text-blue-900 {
+  color: #60a5fa !important;
+}
+
+html.dark .border-blue-200,
+html.dark .border-blue-300 {
+  border-color: #3b82f6 !important;
+}
+
+/* ==========================================================================
+   6. TABLES
+   Headers, rows, alternating fills, and borders with clear readability
+   ========================================================================== */
+html.dark thead,
+html.dark thead tr {
+  background-color: #16243d !important;
+}
+
+html.dark thead th {
+  color: #cbd5e1 !important;
+  border-bottom-color: #1e3256 !important;
+}
+
+html.dark tbody tr {
+  background-color: #121d33 !important;
+  border-color: #1a2b47 !important;
+}
+
+html.dark tbody tr:hover,
+html.dark tr[class*="hover:bg-blue-50"]:hover,
+html.dark tr[class*="hover:bg-slate-50"]:hover {
+  background-color: #192b4a !important;
+}
+
+/* ==========================================================================
+   7. CHARTS & DATA VISUALIZATION & MAPS
+   Labels, axes, marker tags, and interactive bars readable on dark navy
+   ========================================================================== */
+html.dark svg line[stroke="#f1f5f9"],
+html.dark svg line[stroke="#e2e8f0"] {
+  stroke: #1c2d47 !important;
+}
+
+html.dark svg line[stroke="#cbd5e1"] {
+  stroke: #2a3f63 !important;
+}
+
+html.dark svg text[fill="#94a3b8"] {
+  fill: #94a3b8 !important;
+}
+
+html.dark svg text[fill="#64748b"],
+html.dark svg text[fill="#475569"] {
+  fill: #cbd5e1 !important;
+}
+
+html.dark svg text[fill="#0f172a"] {
+  fill: #f8fafc !important;
+}
+
+html.dark svg text[fill="#15803d"] {
+  fill: #4ade80 !important;
+}
+
+html.dark svg rect[fill="#eff6ff"] {
+  fill: #192a47 !important;
+}
+
+/* SVG Map Marker Tags & Label Boxes */
+html.dark svg g rect[fill="#ffffff"],
+html.dark svg rect[fill="#ffffff"] {
+  fill: #14223b !important;
+  stroke: #253d61 !important;
+}
+
+html.dark svg g rect[stroke="#0f172a"],
+html.dark svg rect[stroke="#0f172a"] {
+  stroke: #38bdf8 !important;
+}
+
+html.dark svg circle[stroke="#ffffff"] {
+  stroke: #0c1527 !important;
+}
+
+html.dark .border-white {
+  border-color: #0c1527 !important;
+}
+
+/* SVG GIS Map Boundaries & Terrain */
+html.dark [id^="state-path-"] {
+  fill: #132036 !important;
+  stroke: #253d61 !important;
+}
+
+html.dark [id^="state-path-"]:hover {
+  fill: #1d3254 !important;
+}
+
+html.dark svg path[fill="#ffffff"] {
+  fill: #132036 !important;
+  stroke: #253d61 !important;
+}
+
+html.dark svg path[fill="#f1f5f9"],
+html.dark svg path[fill="#f8fafc"] {
+  fill: #0c1526 !important;
+  stroke: #1e3256 !important;
+}
+
+html.dark svg path[fill="#eff6ff"] {
+  fill: #1a2f52 !important;
+  stroke: #38bdf8 !important;
+}
+
+/* Dropdown Options */
+html.dark select option {
+  background-color: #0c1526 !important;
+  color: #f8fafc !important;
+}
+
+/* ==========================================================================
+   8. MODALS, DIALOGS & OVERLAYS
+   ========================================================================== */
+html.dark [role="dialog"],
+html.dark [role="dialog"] .bg-white,
+html.dark .fixed.inset-0 .bg-white,
+html.dark .shadow-xl,
+html.dark .shadow-2xl {
+  background-color: #132238 !important;
+  border-color: #273e63 !important;
+}
+
+/* Landing Page Hero Gradient */
+html.dark .bg-gradient-to-b.from-slate-50.via-white.to-slate-50 {
+  background: linear-gradient(180deg, #080f1e 0%, #0e1829 50%, #080f1e 100%) !important;
+}
+
+/* Mobile Bottom Navigation Bar */
+html.dark nav[aria-label="Mobile navigation"] {
+  background-color: #0c1527 !important;
+  border-top-color: #1e3256 !important;
+}
+
+/* Theme Toggle Control in Dark Mode */
+html.dark #theme-mode-toggle {
+  background-color: #121d33 !important;
+  border-color: #1e3256 !important;
+}
+
+html.dark #theme-mode-toggle #theme-btn-dark {
+  background-color: #1a2c4a !important;
+  color: #38bdf8 !important;
+  border-color: #2b436d !important;
+}
+
+html.dark #theme-mode-toggle #theme-btn-light {
+  color: #94a3b8 !important;
+}
+
+html.dark #theme-mode-toggle #theme-btn-light:hover {
+  color: #f8fafc !important;
+}
+
+/* ==========================================================================
+   9. BHUNETRA LOGO PRESERVATION
+   Ensures the official logo container retains its clean white frame so vector
+   geometry and typography remain 100% faithful and crisp in Dark Mode.
+   ========================================================================== */
+html.dark .bhunetra-logo-frame {
+  background-color: #ffffff !important;
+  border-color: #2b436d !important;
+}
+
+/* ==========================================================================
+   10. DARK MODE HEADER & NAVBAR (BHUNETRA NAVIGATION ARCHITECTURE)
+   Deep Dark Navy Surface, High Contrast Typography, Vivid Active Indicators
+   ========================================================================== */
+
+/* Main Header Container */
+html.dark header,
+html.dark header.bg-white {
+  background-color: #0c1527 !important; /* Deep dark navy navbar */
+  border-bottom-color: #1e3256 !important; /* Crisp dark navy border */
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* BhuNetra Brand in Header */
+html.dark header #brand-logo-btn .text-slate-900 {
+  color: #ffffff !important; /* Bright white primary brand text */
+}
+
+html.dark header #brand-logo-btn .text-slate-500 {
+  color: #94a3b8 !important; /* Readable muted subtitle */
+}
+
+html.dark header #brand-logo-btn:hover .bhunetra-logo-frame {
+  border-color: #10b981 !important;
+}
+
+/* Navigation Links (Desktop Nav) */
+html.dark header nav button {
+  color: #cbd5e1 !important; /* Clearly readable light navigation text */
+  transition: all 150ms ease-in-out;
+}
+
+html.dark header nav button:hover {
+  color: #ffffff !important;
+  background-color: #16243d !important;
+}
+
+/* Active Navigation Item (Citizen Portal) */
+html.dark header nav button.bg-emerald-50,
+html.dark header nav button.text-emerald-700 {
+  background-color: rgba(16, 185, 129, 0.2) !important;
+  border: 1px solid rgba(52, 211, 153, 0.45) !important;
+  color: #34d399 !important; /* High contrast vibrant emerald */
+  font-weight: 700 !important;
+}
+
+/* Active Navigation Item (Authority Portal) */
+html.dark header nav button.bg-blue-50,
+html.dark header nav button.text-blue-700 {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+  border: 1px solid rgba(96, 165, 250, 0.45) !important;
+  color: #60a5fa !important; /* High contrast vibrant blue */
+  font-weight: 700 !important;
+}
+
+/* Mobile Menu Toggle Button */
+html.dark header #mobile-menu-toggle-btn {
+  color: #cbd5e1 !important;
+}
+
+html.dark header #mobile-menu-toggle-btn:hover {
+  background-color: #16243d !important;
+  color: #ffffff !important;
+}
+
+/* Language Selector Control */
+html.dark header #language-selector-btn {
+  background-color: #14223b !important;
+  border-color: #243c63 !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark header #language-selector-btn:hover {
+  background-color: #1a2d4f !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+}
+
+html.dark header #language-selector-btn .text-slate-500,
+html.dark header #language-selector-btn .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+/* User Profile Button */
+html.dark header #user-profile-btn {
+  background-color: #14223b !important;
+  border-color: #243c63 !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark header #user-profile-btn:hover {
+  background-color: #1a2d4f !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+}
+
+html.dark header #user-profile-btn .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+/* Direct Logout Button */
+html.dark header #navbar-logout-btn {
+  background-color: #14223b !important;
+  border-color: #243c63 !important;
+  color: #cbd5e1 !important;
+}
+
+html.dark header #navbar-logout-btn:hover {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  border-color: rgba(239, 68, 68, 0.4) !important;
+  color: #f87171 !important;
+}
+
+/* Public / Landing "Check My Area" Button */
+html.dark header #nav-check-area-btn {
+  background-color: #14223b !important;
+  border-color: #243c63 !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark header #nav-check-area-btn:hover {
+  background-color: #1a2d4f !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+}
+
+/* Dropdown Menus in Header */
+html.dark header .shadow-lg {
+  background-color: #121e33 !important;
+  border-color: #243c63 !important;
+}
+
+html.dark header .shadow-lg .border-slate-100 {
+  border-color: #1e3256 !important;
+}
+
+html.dark header .shadow-lg .text-slate-400 {
+  color: #71829e !important;
+}
+
+html.dark header .shadow-lg .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark header .shadow-lg .text-slate-700,
+html.dark header .shadow-lg .text-slate-800,
+html.dark header .shadow-lg .text-slate-900 {
+  color: #f1f5f9 !important;
+}
+
+html.dark header .shadow-lg button:hover {
+  background-color: #1a2c4a !important;
+}
+
+/* Mobile Navigation Drawer under Header */
+html.dark header .md\:hidden.bg-white {
+  background-color: #0c1527 !important;
+  border-bottom-color: #1e3256 !important;
+}
+
+html.dark header .md\:hidden.bg-white .border-slate-100 {
+  border-color: #1e3256 !important;
+}
+
+html.dark header .md\:hidden.bg-white .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark header .md\:hidden.bg-white button {
+  color: #cbd5e1 !important;
+}
+
+html.dark header .md\:hidden.bg-white button:hover {
+  background-color: #16243d !important;
+  color: #ffffff !important;
+}
+
+html.dark header .md\:hidden.bg-white button .text-slate-400 {
+  color: #71829e !important;
+}
+
+/* ==========================================================================
+   5. LEAFLET GEOGRAPHIC MAP & POPUP STYLING (LIGHT & DARK MODE)
+   ========================================================================== */
+
+/* Remove default Leaflet outline and borders */
+.leaflet-container {
+  font-family: inherit !important;
+  background-color: #f1f5f9;
+  z-index: 10;
+}
+
+html.dark .leaflet-container {
+  background-color: #080f1e !important;
+}
+
+/* Leaflet Popup Content Styling */
+.leaflet-popup-content-wrapper {
+  padding: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.18), 0 8px 10px -6px rgba(15, 23, 42, 0.1) !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  overflow: hidden !important;
+}
+
+html.dark .leaflet-popup-content-wrapper {
+  background: #121d33 !important;
+  border-color: #1e3256 !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.6) !important;
+  color: #f8fafc !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: inherit !important;
+}
+
+.leaflet-popup-tip {
+  background: #ffffff !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+html.dark .leaflet-popup-tip {
+  background: #121d33 !important;
+  box-shadow: none !important;
+  border: 1px solid #1e3256 !important;
+}
+
+.leaflet-popup-close-button {
+  top: 10px !important;
+  right: 10px !important;
+  padding: 4px !important;
+  color: #64748b !important;
+  font-size: 16px !important;
+  width: 22px !important;
+  height: 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 6px !important;
+}
+
+html.dark .leaflet-popup-close-button {
+  color: #94a3b8 !important;
+}
+
+html.dark .leaflet-popup-close-button:hover {
+  background-color: #1e3256 !important;
+  color: #ffffff !important;
+}
+
+/* Leaflet Attribution */
+.leaflet-control-attribution {
+  font-size: 10px !important;
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  color: #64748b !important;
+  padding: 2px 6px !important;
+  border-top-left-radius: 6px !important;
+}
+
+html.dark .leaflet-control-attribution {
+  background-color: rgba(18, 29, 51, 0.88) !important;
+  color: #94a3b8 !important;
+  border-top: 1px solid #1e3256 !important;
+  border-left: 1px solid #1e3256 !important;
+}
+
+html.dark .leaflet-control-attribution a {
+  color: #38bdf8 !important;
+}
+
+/* Custom Marker Pulse Keyframes */
+@keyframes markerPulseSlow {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.marker-pulse-critical {
+  animation: markerPulseSlow 2s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   DARK MODE MAP TILE FILTER FOR KEYLESS OPENSTREETMAP (NO API KEY, NO WATERMARKS)
+   Transforms standard OpenStreetMap tiles into a sleek dark navy basemap
+   without affecting markers, polylines, or overlay panes.
+   ========================================================================== */
+.leaflet-dark-tiles .leaflet-tile-pane {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+
