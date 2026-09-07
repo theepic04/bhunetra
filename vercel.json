@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:match*",
-      "destination": "https://<your-render-backend-name>.onrender.com/api/:match*"
+      "destination": "https://bhunetra-backend.onrender.com/api/:match*"
     },
     {
       "source": "/(.*)",
